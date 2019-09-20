@@ -1,0 +1,35 @@
+.modal {
+  .modal-dialog {
+    position: fixed;
+    margin: auto;
+    width: 420px;
+    height: 100%;
+    right: 0;
+    transform: translate3d(0%, 0, 0);
+  }
+
+  .modal-content {
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .modal-body { padding: 15px 15px 80px; }
+
+  &.fade {
+    .modal-dialog {
+      right: -420px;
+      transition: opacity 0.3s linear, right 0.3s ease-out;
+    }
+
+    &.show .modal-dialog { right: 0; }
+  }
+}
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+}
+
+.modal-header {
+  background-color: #ffffff;
+}

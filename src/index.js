@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'eva-icons/style/scss/eva-icons.scss';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './scss/style.scss';
+import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));

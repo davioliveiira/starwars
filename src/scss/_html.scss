@@ -1,0 +1,27 @@
+body {
+  background-color: #ffffff;
+}
+
+.card {
+  span.point {
+    background-color: #eee;
+    width: 10px;
+    height: 10px;
+    display: inline-table;
+    margin-right: 5px;
+    border-radius: 10px;
+  }
+
+  small > i {
+    vertical-align: text-bottom;
+    font-size: 15px;
+  }
+
+  &.pointer {
+    cursor: pointer;
+
+    &:hover {
+      border-color: #000000;
+    }
+  }
+}
