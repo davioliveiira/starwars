@@ -12,3 +12,6 @@ Run `npm start` into bash
 
 ## Build Production
 Run `npm run build` into bash
+
+## Tests
+Run `npm run test` into bash

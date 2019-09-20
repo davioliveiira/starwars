@@ -11,21 +11,13 @@ const middlewares = [
   routerMiddleware(history),
 ];
 
-// const enableTron = ['development', 'test'].includes(process.env.NODE_ENV);
-const enableTron = false;
-const sagaMonitor = enableTron ? console.tron.createSagaMonitor : {};
-const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
+const sagaMiddleware = createSagaMiddleware({});
 
 middlewares.push(sagaMiddleware);
 
 const store = createStore(
   rootReducer(history),
-  enableTron
-    ? compose(
-      applyMiddleware(...middlewares),
-      console.tron.createEnhancer(),
-    )
-    : compose(applyMiddleware(...middlewares)),
+  compose(applyMiddleware(...middlewares)),
 );
 
 let sagaTask = sagaMiddleware.run(rootSaga);

@@ -65,13 +65,13 @@ class Dashboard extends Component {
           <p className="text-center">Loading...</p>
         ) : (
           <>
-            <div className="d-flex align-items-center mb-4">
+            <div className="page-title d-flex align-items-center mb-4">
               <h2>People <span className="font-weight-bold">({people.count})</span></h2>
             </div>
             <Row className="justify-content-center">
               {people.count > 0 && (
                 people.results.map((p, index) => (
-                  <Col md={4} lg={4} className="mb-4" key={`people_${index}`}>
+                  <Col md={4} lg={4} className="card-people mb-4" key={`people_${index}`}>
                     <Card onClick={() => this.details(p)} className="pointer">
                       <CardBody>
                         <CardText className="font-weight-bold">
