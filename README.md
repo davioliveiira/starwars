@@ -1,5 +1,5 @@
 # Starwars
-Project using [SWAPI](https://swapi.co). This project
+This project is using [SWAPI](https://swapi.co) to list people and information.
 
 ## Setup
 Run `npm install` into bash
